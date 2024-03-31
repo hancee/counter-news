@@ -1,0 +1,5 @@
+__pycache__/
+tmp/
+scratch.ipynb
+scratch.py
+.DS_Store
