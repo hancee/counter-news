@@ -1,20 +1,15 @@
 [tool.poetry]
-name = "news-recommender"
+name = "counter-news"
 version = "0.1.0"
-description = ""
-authors = ["hanceevilla <hancee@importgenius.com>"]
+description = "Alternative news story recommender"
+authors = ["Hancee V <hmvilla@up.edu.ph>"]
+license = "\"MIT\""
 readme = "README.md"
 packages = [{include = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-scikit-learn = "^1.4.1.post1"
-newspaper3k = "^0.2.8"
-matplotlib = "^3.8.3"
-seaborn = "^0.13.2"
-uuid = "^1.30"
-splink = "^3.9.14"
-beautifulsoup4 = "^4.12.3"
+ipykernel = "^6.29.4"
 
 
 [build-system]
