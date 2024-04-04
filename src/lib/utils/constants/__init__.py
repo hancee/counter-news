@@ -1,3 +1,11 @@
+from src.lib.utils.constants.mappers import (
+    country_code_map,
+    event_code_map,
+    geo_type_code_map,
+    gov_arm_code_map,
+    role_code_map,
+)
+
 # Source: https://www.worldstandards.eu/other/tlds/
 # Last updated: 10 April 2023
 COUNTRY_DOMAIN_LIST = [
@@ -330,14 +338,6 @@ SUBDOMAIN_LIST = [
     "ARTICLE",
     "BETA",
 ]
-
-from lib.utils.constants.mappers import (
-    country_code_map,
-    event_code_map,
-    geo_type_code_map,
-    gov_arm_code_map,
-    role_code_map,
-)
 
 country_role_code_map = {
     f"{c}{r}": f"{country_code_map[c].upper()} {role_code_map[r]}"
