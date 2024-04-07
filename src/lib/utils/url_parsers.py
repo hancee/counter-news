@@ -1,7 +1,7 @@
 import re
 
 import numpy as np
-from lib.utils.constants import (
+from src.lib.utils.constants import (
     COUNTRY_DOMAIN_LIST,
     SUBDOMAIN_LIST,
     TOP_LEVEL_DOMAIN_LIST,
