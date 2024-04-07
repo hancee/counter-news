@@ -12,11 +12,12 @@ geo_type_codes = load_data(
 )
 geo_type_code_map = geo_type_codes.set_index("GEOTYPECODE")["DESCRIPTION"].to_dict()
 
-# Source: https://unstats.un.org/unsd/methodology/m49/
+# Source: http://data.gdeltproject.org/documentation/GDELT-Event_Codebook-V2.0.pdf, https://github.com/carrillo/Gdelt/blob/master/resources/staticTables/CAMEO.country.txt
+# Note: Manually-added TWN and SSD
 country_codes = load_data(
-    "src/lib/utils/constants/un_country_codes.tsv", kwargs={"dtype": {"ISOCODE": str}}
+    "src/lib/utils/constants/cameo_country_codes.tsv", kwargs={"dtype": {"CODE": str, "LABEL": str}}
 )
-country_code_map = country_codes.set_index("ISOCODE")["COUNTRY"].to_dict()
+country_code_map = country_codes.set_index("CODE")["LABEL"].to_dict()
 
 # Source: http://data.gdeltproject.org/documentation/CAMEO.Manual.1.1b3.pdf
 role_codes = load_data(

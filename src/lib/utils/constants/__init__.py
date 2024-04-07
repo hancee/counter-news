@@ -340,13 +340,9 @@ SUBDOMAIN_LIST = [
 ]
 
 country_role_code_map = {
-    f"{c}{r}": f"{country_code_map[c].upper()} {role_code_map[r]}"
-    for c in country_code_map
-    for r in role_code_map
+    f"{c}{r}": f"{str(country_code_map[c]).upper()} {role_code_map[r]}" for c in country_code_map for r in role_code_map
 }
 
 country_gov_arm_code_map = {
-    f"{k}{ga}": f"{country_code_map[k].upper()} {gov_arm_code_map[ga]}"
-    for k in country_code_map.keys()
-    for ga in gov_arm_code_map.keys()
+    f"{c}{ga}": f"{str(country_code_map[c]).upper()} {gov_arm_code_map[ga]}" for c in country_code_map.keys() for ga in gov_arm_code_map.keys()
 }
